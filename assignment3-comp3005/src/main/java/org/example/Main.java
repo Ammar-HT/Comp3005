@@ -15,9 +15,7 @@ public class Main {
         try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(url,user,password);
-            if (connection != null){
-                //System.out.println("Connected to the database");
-            }else{
+            if (connection == null){
                 System.out.println("Failed to connect to the database");
             }
         }
@@ -82,8 +80,10 @@ public class Main {
     public static void main(String[] args) {
 
         try {
+            //addStudent("Ahmed", "example", "ahmed@example.com", Date.valueOf("2024-03-18"));
+            //updateStudentEmail(4, "ahmed@example1.com");
+            //deleteStudent(4);
             getAllStudents();
-
         }
         catch (Exception e){
             System.out.println(e);
